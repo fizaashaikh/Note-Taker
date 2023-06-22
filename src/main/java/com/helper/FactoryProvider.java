@@ -9,13 +9,13 @@ public class FactoryProvider {
 
     public static SessionFactory getSessionFactory() {
         if(sessionFactory == null) {
-            sessionFactory = new Configuration().configure("file:src/main/resources/hibernate.cfg.xml").buildSessionFactory();
+            sessionFactory = new Configuration().configure().buildSessionFactory();
         }
 
         return sessionFactory;
     }
 
-    public void closeFactory() {
+    public static void closeFactory() {
         if(sessionFactory.isOpen())
             sessionFactory.close();
     }
