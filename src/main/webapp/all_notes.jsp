@@ -19,7 +19,7 @@
     <div class="container">
         <%@include file="navbar.jsp"%>
         <br/>
-        <h1 class="text-uppercase">All Notes: </h1>
+        <h1 class="text-uppercase">All Notes </h1>
 
         <div class="row">
             <div class="col-12">
@@ -32,14 +32,16 @@
                     for(Note note: notes) {
                 %>
                     <div class="card mt-3">
-                        <img class="card-img-top m-3" style="max-width:80px;" src="img/notes.png" alt="Card image cap">
-                        <div class="card-body">
+                        <img class="card-img-top ml-5 mt-3" style="max-width:55px;" src="img/notes.png" alt="Card image cap">
+                        <div class="card-body px-5">
                             <h5 class="card-title"><%= note.getTitle() %></h5>
                             <p class="card-text">
                                 <%= note.getContent() %>
                             </p>
-                            <a href="#" class="btn btn-danger">Delete</a>
-                            <a href="#" class="btn btn-primary">Update</a>
+                            <div class="mt-4">
+                                <a href="DeleteNoteServlet?note_id=<%= note.getNodeId()%>" class="btn btn-danger mr-4">Delete</a>
+                                <a href="#" class="btn btn-primary">Update</a>
+                            </div>
                         </div>
                     </div>
                 <%

@@ -18,4 +18,13 @@
     <url-pattern>/SaveNoteServlet</url-pattern>
   </servlet-mapping>
 
+  <servlet>
+    <servlet-name>DeleteNoteServlet</servlet-name>
+    <servlet-class>com.servlets.DeleteNoteServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>DeleteNoteServlet</servlet-name>
+    <url-pattern>/DeleteNoteServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
