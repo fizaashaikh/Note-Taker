@@ -27,4 +27,14 @@
     <servlet-name>DeleteNoteServlet</servlet-name>
     <url-pattern>/DeleteNoteServlet</url-pattern>
   </servlet-mapping>
+
+  <servlet>
+    <servlet-name>UpdateNoteServlet</servlet-name>
+    <servlet-class>com.servlets.UpdateNoteServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>UpdateNoteServlet</servlet-name>
+    <url-pattern>/UpdateNoteServlet</url-pattern>
+  </servlet-mapping>
 </web-app>

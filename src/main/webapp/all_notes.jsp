@@ -40,7 +40,10 @@
                             </p>
                             <div class="mt-4">
                                 <a href="DeleteNoteServlet?note_id=<%= note.getNodeId()%>" class="btn btn-danger mr-4">Delete</a>
-                                <a href="#" class="btn btn-primary">Update</a>
+                                <a href="edit_note.jsp?note_id=<%= note.getNodeId()%>" class="btn btn-primary">Update</a>
+                            </div>
+                            <div class="card-footer  p-1 mt-4">
+                                <small class="text-muted">Last Updated: <%= note.getAddedDate() %></small>
                             </div>
                         </div>
                     </div>

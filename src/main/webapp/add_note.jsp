@@ -15,20 +15,21 @@
         <br/>
 
         <!-- form -->
-        <form action="SaveNoteServlet" method="post">
-          <div class="form-group">
-            <label for="noteTitle">Note Title</label>
-            <input name="title" type="text" class="form-control" id="noteTitle" placeholder="Enter Note Title" required>
-          </div>
-          <div class="form-group">
-            <label for="noteContent">Note Content</label>
-            <textarea name="content" style="height:300px;" class="form-control" id="noteContent" placeholder="Enter Here..." required></textarea>
-          </div>
-          <br/>
-          <div class="container text-center">
-            <button type="submit" class="btn btn-primary">Add</button>
-          </div>
-        </form>
+            <form action="SaveNoteServlet" method="post">
+                <div class="form-group">
+                    <label for="noteTitle">Note Title</label>
+                    <input name="title" type="text" class="form-control" id="noteTitle" placeholder="Enter Note Title" required>
+                </div>
+                <div class="form-group">
+                    <label for="noteContent">Note Content</label>
+                    <textarea name="content" style="height:300px;" class="form-control" id="noteContent" placeholder="Enter Here..." required></textarea>
+                </div>
+                <br/>
+                <div class="container text-center">
+                    <button type="submit" class="btn btn-primary">Add</button>
+                </div>
+                </form>
+
      </div>
   </body>
 </html>
