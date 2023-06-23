@@ -31,17 +31,17 @@ public class SaveNoteServlet extends HttpServlet {
             Note note = new Note(noteTitle, noteContent, new Date());
 
             // hibernate: save
-            Session openSession = FactoryProvider.getSessionFactory().openSession();
-            Transaction transaction = openSession.beginTransaction();
-            openSession.save(note);
+            Session session = FactoryProvider.getSessionFactory().openSession();
+            Transaction transaction = session.beginTransaction();
+            session.save(note);
             transaction.commit();
-            openSession.close();
-            FactoryProvider.closeFactory();
+            session.close();
 
             resp.setContentType("text/html");
             PrintWriter writer = resp.getWriter();
             writer.println("<h1 style='text-align:center'>Note added successfully!</h1>");
             writer.println("<h1 style='text-align:center'><a href='all_notes.jsp'>View all notes</a></h1>");
+//            FactoryProvider.closeFactory();
 
         } catch (Exception e) {
             e.printStackTrace();
